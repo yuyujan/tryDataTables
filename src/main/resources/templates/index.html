@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Web Page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <link href="https://cdn.datatables.net/v/dt/dt-2.0.1/fc-5.0.0/fh-4.0.0/sc-2.4.0/datatables.min.css"
+        rel="stylesheet">
+
+    <script src="https://cdn.datatables.net/v/dt/dt-2.0.1/fc-5.0.0/fh-4.0.0/sc-2.4.0/datatables.min.js"></script>
+</head>
+
+<body>
+    <h1>Welcome to My Web Page</h1>
+    <p>This is a sample HTML page.</p>
+    <table id="testTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Field1</th>
+                <th>Field2</th>
+                <th>Field3</th>
+                <th>Field4</th>
+                <th>Field5</th>
+                <th>Field6</th>
+                <th>Field7</th>
+                <th>Field8</th>
+                <th>Field9</th>
+                <th>Field10</th>
+                <th>Field11</th>
+                <th>Field12</th>
+                <th>Field13</th>
+                <th>Field14</th>
+                <th>Field15</th>
+                <th>Field16</th>
+                <th>Field17</th>
+                <th>Field18</th>
+                <th>Field19</th>
+                <th>Field20</th>
+                <th>Field21</th>
+                <th>Field22</th>
+                <th>Field23</th>
+                <th>Field24</th>
+                <th>Field25</th>
+                <th>Field26</th>
+                <th>Field27</th>
+                <th>Field28</th>
+                <th>Field29</th>
+                <th>Field30</th>
+                <th>Field31</th>
+                <th>Field32</th>
+                <th>Field33</th>
+                <th>Field34</th>
+                <th>Field35</th>
+                <th>Field36</th>
+                <th>Field37</th>
+                <th>Field38</th>
+                <th>Field39</th>
+                <th>Field40</th>
+            </tr>
+        </thead>
+
+    </table>
+</body>
+
+</html>
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            url: "/fetchData",
+            method: "GET",
+            success: function (data) {
+                $('#testTable').DataTable({
+                    data: data,
+                    columns: [
+                        { data: 'name' },
+                        { data: 'field1' },
+                        { data: 'field2' },
+                        { data: 'field3' },
+                        { data: 'field4' },
+                        { data: 'field5' },
+                        { data: 'field6' },
+                        { data: 'field7' },
+                        { data: 'field8' },
+                        { data: 'field9' },
+                        { data: 'field10' },
+                        { data: 'field11' },
+                        { data: 'field12' },
+                        { data: 'field13' },
+                        { data: 'field14' },
+                        { data: 'field15' },
+                        { data: 'field16' },
+                        { data: 'field17' },
+                        { data: 'field18' },
+                        { data: 'field19' },
+                        { data: 'field20' },
+                        { data: 'field21' },
+                        { data: 'field22' },
+                        { data: 'field23' },
+                        { data: 'field24' },
+                        { data: 'field25' },
+                        { data: 'field26' },
+                        { data: 'field27' },
+                        { data: 'field28' },
+                        { data: 'field29' },
+                        { data: 'field30' },
+                        { data: 'field31' },
+                        { data: 'field32' },
+                        { data: 'field33' },
+                        { data: 'field34' },
+                        { data: 'field35' },
+                        { data: 'field36' },
+                        { data: 'field37' },
+                        { data: 'field38' },
+                        { data: 'field39' },
+                        { data: 'field40' }
+                    ],
+                    paging: true,
+                    info: false,
+                    searching: false,
+                    ordering: false,
+                    scrollY: "200px",
+                    scroller: true,
+                    deferRender: true,
+                    fixedHeader: {
+                        header: true
+                    },
+                    fixedColumns: {
+                        leftColumns: 1
+                    }
+
+
+                });
+            }
+        });
+    });
+
+
+
+</script>
